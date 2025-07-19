@@ -1,0 +1,44 @@
+John Catalana
+7/18/2025
+Terminal Dungeon Adventure Game
+
+Overview
+
+This is a text-based dungeon exploration game written in Java. The player explores 
+rooms, fights monsters, collects items, and can undo their moves using a stack-based backtracking system. 
+The game runs entirely in the terminal, with no graphical interface required.
+
+The project was created to fulfill all the Student Learning Outcomes (SLOs) for the course,
+including the use of multiple data structures, recursive functions, object-oriented design, 
+and algorithm development.
+
+Features
+
+- Move between interconnected dungeon rooms (north, south, east, west).
+- Fight monsters in turn-based battles.
+- Monsters can drop items when defeated.
+- Recursively print player inventory.
+- Recursive monster chain attack retaliation.
+- Use items such as Health Potions to restore HP.
+- Undo previous room movement using a stack.
+- Room-specific item pickup and interaction system.
+
+Technical Highlights
+
+- Data Structures Used:
+  - Arrays (Item[] inventory)
+  - Queue (LinkedList<Monster> for monster order)
+  - Stack (Stack<String> for movement undo)
+  - HashMap (Map<String, Room> for dungeon layout)
+  - Strings for input parsing and naming
+
+- Recursive Functions:
+  - printInventoryRecursive() — prints items recursively
+  - monsterChainAttack() — monsters attack player in recursive sequence
+
+- Object-Oriented Classes:
+  - Player.java – handles inventory, health, actions
+  - Room.java – stores monsters, exits, and items
+  - Monster.java – enemy logic with HP and attack
+  - Item.java – used to define healing and other effects
+  - Game.java – main engine that runs everything
